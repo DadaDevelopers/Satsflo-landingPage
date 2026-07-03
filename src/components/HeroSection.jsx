@@ -1,16 +1,13 @@
-import { useState } from 'react'
-import logoIcon from '../assets/Logo Icon.svg'
+import Navbar from './Navbar'
 import phoneMockup from '../assets/Black-Titanium.svg'
 import pic1 from '../assets/pic1.svg'
 import pic2 from '../assets/pic2.svg'
 import pic3 from '../assets/pic3.svg'
 import pic4 from '../assets/pic4.svg'
 
-const NAV_LINKS = ['Features', 'Community', 'About', 'Privacy']
-
 function AppleIcon() {
   return (
-    <svg width="18" height="24" viewBox="0 0 18 24" fill="none" aria-hidden="true">
+    <svg className="h-[23.9px] w-[18.03px]" viewBox="0 0 18 24" fill="none" aria-hidden="true">
       <path
         fill="#fff"
         d="M14.86 12.7c-.02-2.1 1.72-3.1 1.8-3.15-.98-1.44-2.51-1.63-3.05-1.66-1.3-.13-2.54.77-3.2.77-.66 0-1.68-.75-2.76-.73-1.42.02-2.73.83-3.46 2.1-1.47 2.56-.38 6.36 1.06 8.44.7 1.02 1.53 2.16 2.63 2.12 1.05-.04 1.45-.68 2.72-.68s1.63.68 2.75.66c1.14-.02 1.86-1.03 2.55-2.06.8-1.18 1.13-2.33 1.15-2.39-.03-.01-2.17-.83-2.19-3.42Z"
@@ -25,11 +22,11 @@ function AppleIcon() {
 
 function GooglePlayIcon() {
   return (
-    <svg width="22" height="24" viewBox="0 0 22 24" fill="none" aria-hidden="true">
-      <path fill="#fff" d="M1.4 1.02a1.4 1.4 0 0 0-.4 1v19.96c0 .43.16.77.4 1l11.05-11L1.4 1.02Z" />
-      <path fill="#fff" d="m16.6 8.1-3.4-1.97-3.05 3.03 3.05 3.03 3.44-1.98a1.3 1.3 0 0 0 0-2.1Z" />
-      <path fill="#fff" d="m1.9 22.94 10.7-6.19-2.65-2.63L1.9 22.94Z" />
-      <path fill="#fff" d="m1.9 1.06 8.05 8.02 2.65-2.63L1.9 1.06Z" />
+    <svg className="h-[23.9px] w-[21.73px]" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+      <path
+        fill="#fff"
+        d="M22.018 13.298l-3.919 2.218-3.515-3.493 3.543-3.521 3.891 2.202a1.49 1.49 0 0 1 0 2.594zM1.337.924a1.486 1.486 0 0 0-.112.568v21.017c0 .217.045.419.124.6l11.155-11.087L1.337.924zm12.207 10.065l3.258-3.238L3.45.195a1.466 1.466 0 0 0-.946-.195l11.04 10.989zm0 2.067l-11 10.933c.298.036.612-.014.906-.183l13.324-7.54-3.23-3.21z"
+      />
     </svg>
   )
 }
@@ -67,81 +64,25 @@ function StarIcon() {
 const AVATARS = [pic1, pic2, pic3, pic4]
 
 export default function HeroSection() {
-  const [menuOpen, setMenuOpen] = useState(false)
-
   return (
     <section className="relative isolate overflow-hidden bg-[linear-gradient(115.27deg,#FF4081_-7.57%,#A2207B_32.38%,#550576_65.07%)] pb-28 sm:pb-36 lg:pb-40">
-      <div className="relative z-10 mx-auto max-w-[1320px] px-5 sm:px-8 lg:px-10">
-        <nav className="flex items-center justify-between gap-4 py-6 sm:py-8">
-          <a href="#top" className="flex items-center gap-1">
-            <img src={logoIcon} alt="" className="h-8 w-auto" />
-            <span className="font-[Anton] text-2xl leading-none text-white">Satsflo</span>
-          </a>
+      <div className="relative z-10 mx-auto max-w-330 px-5 sm:px-8 lg:px-10">
+        <Navbar />
 
-          <ul className="hidden items-center gap-10 lg:flex">
-            {NAV_LINKS.map((link) => (
-              <li key={link}>
-                <a href={`#${link.toLowerCase()}`} className="text-base text-white transition hover:text-white/80">
-                  {link}
-                </a>
-              </li>
-            ))}
-          </ul>
-
-          <a
-            href="#waitlist"
-            className="hidden rounded-xl border-[0.8px] border-[#F2F2F2] px-4 py-2.5 text-base text-[#F2F2F2] transition hover:bg-white/10 lg:inline-block"
-          >
-            Join Waitlist
-          </a>
-
-          <button
-            type="button"
-            onClick={() => setMenuOpen((open) => !open)}
-            aria-expanded={menuOpen}
-            aria-label="Toggle menu"
-            className="inline-flex h-10 w-10 items-center justify-center rounded-lg border border-white/30 text-white lg:hidden"
-          >
-            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true">
-              {menuOpen ? (
-                <path stroke="#fff" strokeWidth="1.5" strokeLinecap="round" d="M4 4l12 12M16 4 4 16" />
-              ) : (
-                <path stroke="#fff" strokeWidth="1.5" strokeLinecap="round" d="M3 5h14M3 10h14M3 15h14" />
-              )}
-            </svg>
-          </button>
-        </nav>
-
-        {menuOpen && (
-          <div className="mb-4 flex flex-col gap-4 rounded-2xl border border-white/15 bg-white/10 p-5 backdrop-blur-sm lg:hidden">
-            {NAV_LINKS.map((link) => (
-              <a
-                key={link}
-                href={`#${link.toLowerCase()}`}
-                className="text-base text-white"
-                onClick={() => setMenuOpen(false)}
-              >
-                {link}
-              </a>
-            ))}
-            <a
-              href="#waitlist"
-              className="rounded-xl border-[0.8px] border-[#F2F2F2] px-4 py-2.5 text-center text-base text-[#F2F2F2]"
-              onClick={() => setMenuOpen(false)}
-            >
-              Join Waitlist
-            </a>
-          </div>
-        )}
-
-        <div className="grid grid-cols-1 items-center gap-12 pt-6 sm:pt-10 lg:grid-cols-2 lg:gap-8 lg:pt-16">
-          <div className="max-w-xl">
-            <h1 className="text-[40px] font-semibold leading-[1.15] tracking-[-0.03em] text-white sm:text-[52px] lg:text-[64px] lg:leading-[1.25] lg:tracking-[-0.04em]">
-              Understand Your Cycle. Connect With{' '}
-              <span className="font-serif italic text-[#D9C4F0]">Confidence.</span>
+        <div className="grid grid-cols-1 items-center gap-12 pt-10 sm:pt-14 lg:grid-cols-2 lg:gap-8 lg:pt-16">
+          <div className="max-w-xl lg:max-w-151.5">
+            <h1 className="text-center text-[48px] font-semibold leading-14 tracking-[-0.04em] text-white sm:text-left sm:text-[52px] sm:leading-[1.1] sm:tracking-[-0.03em] lg:text-[64px] lg:leading-tight lg:tracking-[-0.04em]">
+              {'Understand Your '}
+              <br />
+              {'Cycle. Connect'}
+              <br className="sm:hidden" />
+              {' With'}
+              <br className="hidden sm:inline" />
+              {' '}
+              <span className="font-serif italic text-[#DED4FF]">Confidence.</span>
             </h1>
 
-            <p className="mt-6 text-base leading-relaxed tracking-[-0.02em] text-white/90 sm:text-lg lg:mt-8 lg:text-xl lg:leading-[1.6]">
+            <p className="mx-auto mt-6 max-w-92.5 text-center text-lg font-normal leading-7.5 text-white sm:mx-0 sm:max-w-none sm:text-left sm:tracking-[-0.02em] sm:text-white/90 lg:mt-8 lg:text-xl lg:leading-[1.6]">
               A modern women&apos;s health platform that helps you understand your body&apos;s natural
               rhythms, stay connected with those who matter, and celebrate life&apos;s moments through
               Bitcoin-powered gifting.
@@ -149,17 +90,17 @@ export default function HeroSection() {
 
             <div className="mt-8 flex flex-col gap-4 sm:flex-row sm:items-center lg:mt-12">
               <a
-                href="#download"
-                className="flex items-center justify-center gap-2 rounded-xl border-[0.8px] border-white bg-[#FF4081] px-6 py-[18px] text-lg font-medium text-white transition hover:brightness-105"
+                href="/src/assets/base.apk"
+                className="flex items-center justify-center gap-2 whitespace-nowrap rounded-xl border-[0.8px] border-white bg-[#FF4081] py-4.5 pr-5 pl-6 text-lg font-medium text-white transition hover:brightness-105 lg:h-16.5 lg:min-w-60.75 lg:text-[20px] lg:leading-7.5"
               >
                 <AppleIcon />
-                <span className="mx-1 h-4 w-px bg-white" />
+                <span className="h-4 w-px shrink-0 bg-white" />
                 <GooglePlayIcon />
                 <span>Download App</span>
               </a>
               <a
                 href="#waitlist"
-                className="flex items-center justify-center rounded-xl border-[0.8px] border-white px-6 py-[18px] text-lg font-medium text-white transition hover:bg-white/10"
+                className="flex items-center justify-center whitespace-nowrap rounded-xl border-[0.8px] border-white px-6 py-4.5 text-lg font-medium text-white transition hover:bg-white/10 lg:h-16.5 lg:w-57.5 lg:text-[20px] lg:leading-7.5"
               >
                 Join Waitlist
               </a>
@@ -191,25 +132,25 @@ export default function HeroSection() {
             </div>
           </div>
 
-          <div className="relative mx-auto w-full max-w-[420px] lg:max-w-none">
+          <div className="relative mx-auto w-full max-w-105 translate-y-12 lg:max-w-none">
             <HeartShape className="pointer-events-none absolute -top-8 -right-4 z-0 h-70 w-70 opacity-20 sm:-top-10 sm:h-95 sm:w-95 lg:-top-16 lg:-right-10 lg:h-140.5 lg:w-154" />
-            <HeartShape className="pointer-events-none absolute -bottom-6 -left-6 z-0 h-55 w-55 rotate-180 opacity-20 sm:-bottom-8 sm:h-75 sm:w-75 lg:bottom-4 lg:left-0 lg:h-110 lg:w-110" />
+            <HeartShape className="pointer-events-none absolute -bottom-8 -left-10 z-0 h-70 w-70 rotate-180 opacity-20 sm:-bottom-10 sm:-left-8 sm:h-75 sm:w-75 lg:-bottom-2 lg:-left-16 lg:h-110 lg:w-110" />
             <img
               src={phoneMockup}
               alt="Satsflo app screens showing cycle tracking and a Bitcoin gift token"
-              className="relative z-10 mx-auto h-auto w-full max-w-[440px] drop-shadow-2xl lg:max-w-[563px]"
+              className="relative z-10 mx-auto h-auto w-full max-w-110.5 drop-shadow-2xl lg:max-w-140.75"
             />
           </div>
         </div>
       </div>
-      <div className="absolute inset-x-0 bottom-0 h-16 w-full overflow-hidden bg-[linear-gradient(106.49deg,#A01F7B_1.84%,#771178_21.82%,#550576_41.79%)] sm:h-24 lg:h-28">
+      <div className="absolute inset-x-0 bottom-0 h-16 w-full overflow-hidden bg-[linear-gradient(106.49deg,#A01F7B_1.84%,#771178_21.82%,#550576_41.79%)] sm:h-24 lg:h-28 z-0">
         <svg
           aria-hidden="true"
           viewBox="0 0 1440 100"
           preserveAspectRatio="none"
           className="absolute inset-0 h-full w-full"
         >
-          <path fill="#fff" d="M0,48 C380,48 620,96 850,90 C1080,84 1250,58 1440,48 L1440,100 L0,100 Z" />
+          <path fill="#fff" d="M0,30 C720,110 720,110 1440,30 L1440,100 L0,100 Z" />
         </svg>
       </div>
     </section>
