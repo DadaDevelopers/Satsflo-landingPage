@@ -202,15 +202,16 @@ export default function HeroSection() {
           </div>
         </div>
       </div>
-
-      <svg
-        aria-hidden="true"
-        className="absolute inset-x-0 bottom-0 z-0 h-16 w-full sm:h-24 lg:h-28"
-        viewBox="0 0 1440 100"
-        preserveAspectRatio="none"
-      >
-        <path fill="#fff" d="M0,70 C320,110 500,10 900,35 C1150,52 1300,45 1440,20 L1440,100 L0,100 Z" />
-      </svg>
+      <div className="absolute inset-x-0 bottom-0 h-16 w-full overflow-hidden bg-[linear-gradient(106.49deg,#A01F7B_1.84%,#771178_21.82%,#550576_41.79%)] sm:h-24 lg:h-28">
+        <svg
+          aria-hidden="true"
+          viewBox="0 0 1440 100"
+          preserveAspectRatio="none"
+          className="absolute inset-0 h-full w-full"
+        >
+          <path fill="#fff" d="M0,48 C380,48 620,96 850,90 C1080,84 1250,58 1440,48 L1440,100 L0,100 Z" />
+        </svg>
+      </div>
     </section>
   )
 }
