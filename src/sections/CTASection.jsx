@@ -21,7 +21,9 @@ export default function CTASection() {
         <div className="cta-buttons-container">
           <svg className="cta-buttons-svg" width="495" height="68" viewBox="0 0 495 68" fill="none" xmlns="http://www.w3.org/2000/svg" shapeRendering="geometricPrecision">
             {/* Download App Link */}
-            <a href="https://drive.google.com/file/d/1wiczY25-ox_b2mJZSq6yDwo9_kRLedAA/view?usp=drive_link" 
+            <a href="https://drive.google.com/file/d/1wiczY25-ox_b2mJZSq6yDwo9_kRLedAA/view?usp=drive_link"
+              target="_blank"
+              rel="noopener noreferrer"
               className="cta-svg-btn cta-svg-btn-download">
               <rect x="0.400781" y="0.399805" width="243.8" height="66.8" rx="12.4" fill="#FF4081" shapeRendering="geometricPrecision"/>
               <rect x="0.400781" y="0.399805" width="243.8" height="66.8" rx="12.4" stroke="white" strokeWidth="0.8" shapeRendering="geometricPrecision"/>
