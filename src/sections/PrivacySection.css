@@ -1,0 +1,452 @@
+.privacy-section {
+  width: 100%;
+  background: #ffffff;
+  padding: 120px 24px;
+  display: flex;
+  justify-content: center;
+}
+
+.privacy-cards-container {
+  max-width: 1282px; /* Matches SVG design width */
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 48px; /* Gap between cards */
+}
+
+.privacy-card {
+  border-radius: 40px;
+  padding: 64px 80px;
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 60px;
+  align-items: center;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+.community-card {
+  background: #FFE6EE; /* Pink background matching mockup */
+}
+
+.security-card {
+  background: #FAF5FF; /* Lavender background matching mockup */
+  grid-template-columns: 0.9fr 1.1fr; /* Shield on left, text on right */
+}
+
+/* Card Information Panel */
+.card-info {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.card-title {
+  font-size: 42px;
+  line-height: 1.2;
+  font-family: var(--font-sans), sans-serif;
+  font-weight: 800;
+  margin-bottom: 8px;
+  letter-spacing: -0.02em;
+}
+
+.card-title.text-pink {
+  color: #FF4081; /* Pink theme title */
+}
+
+.card-title.text-purple {
+  color: #5A2CA0; /* Deep purple title matching design */
+}
+
+.card-subtitle {
+  font-size: 18px;
+  color: #212121; /* Match dark subtitle text */
+  font-weight: 500;
+  margin-bottom: 32px;
+}
+
+/* Features checklist */
+.card-features {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 36px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.card-features li {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  font-size: 16px;
+  color: #212121;
+  font-weight: 600;
+}
+
+.check-wrapper {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.pink-check {
+  background: #ffffff;
+  color: #FF4081;
+  border: 1.5px solid #FFB2CC;
+}
+
+.purple-check {
+  background: #ffffff;
+  color: #8b5cf6; /* Purple checkmark on lavender card */
+  border: 1.5px solid #8b5cf6; /* Matching purple border */
+}
+
+/* Button customizations */
+.community-btn {
+  background-color: #FF4081 !important;
+  border-color: #FF4081 !important;
+  color: #ffffff !important;
+  padding: 16px 36px !important;
+  font-size: 16px !important;
+  font-weight: 700 !important;
+  border-radius: 30px !important;
+  transition: all 0.3s ease !important;
+  cursor: pointer;
+}
+
+.community-btn:hover {
+  background-color: #e03570 !important;
+  border-color: #e03570 !important;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 15px rgba(255, 64, 129, 0.25);
+}
+
+.security-btn {
+  background-color: #FF4081 !important;
+  border-color: #FF4081 !important;
+  color: #ffffff !important;
+  padding: 16px 36px !important;
+  font-size: 16px !important;
+  font-weight: 700 !important;
+  border-radius: 30px !important;
+  transition: all 0.3s ease !important;
+  cursor: pointer;
+}
+
+.security-btn:hover {
+  background-color: #e03570 !important;
+  border-color: #e03570 !important;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 15px rgba(255, 64, 129, 0.25);
+}
+
+/* Graphic Area */
+.card-graphic {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.privacy-graphic {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+/* Floating animation for the 3D shield */
+@keyframes floatShield {
+  0% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-10px) rotate(1deg);
+  }
+  100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+}
+
+.privacy-shield-img {
+  max-width: 320px;
+  width: 100%;
+  height: auto;
+  animation: floatShield 6s ease-in-out infinite;
+  filter: drop-shadow(0 20px 40px rgba(124, 58, 237, 0.15));
+}
+
+/* Mockup Card (Zuri Hassan Post mockup) */
+.community-mockup-col {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.community-post-card {
+  background: #ffffff;
+  border-radius: 24px;
+  box-shadow: 0 20px 40px rgba(255, 64, 129, 0.08), 0 5px 15px rgba(0, 0, 0, 0.02);
+  padding: 32px;
+  width: 100%;
+  max-width: 612px;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  text-align: left;
+  box-sizing: border-box;
+}
+
+.post-header {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.post-avatar-wrapper {
+  position: relative;
+  width: 78px;
+  height: 78px;
+}
+
+.post-avatar {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 4px solid #FFE6EE;
+}
+
+.post-avatar-badge {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background: #FF4081;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  font-weight: 700;
+  border: 2.5px solid #ffffff;
+}
+
+.post-user-info {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.post-username-row {
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.post-name {
+  font-weight: 700;
+  color: #212121;
+  font-size: 18px;
+}
+
+.post-handle {
+  color: #888888;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.post-active {
+  color: #888888;
+  font-size: 13px;
+  font-weight: 500;
+}
+
+.post-content {
+  margin-top: 4px;
+}
+
+.post-body-title {
+  font-weight: 700;
+  color: #212121;
+  font-size: 16px;
+  margin-bottom: 6px;
+}
+
+.post-body-text {
+  color: #444444;
+  font-size: 15px;
+  line-height: 1.5;
+  font-weight: 400;
+}
+
+.post-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-top: 1.5px solid #F6F6F6;
+  padding-top: 16px;
+  margin-top: 8px;
+}
+
+.post-actions {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+.post-action {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #888888;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.post-action:hover {
+  color: #FF4081;
+}
+
+.post-replies {
+  display: flex;
+  align-items: center;
+  padding-left: 8px;
+}
+
+.reply-avatar {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  border: 2px solid #ffffff;
+  margin-left: -8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 10px;
+  font-weight: 700;
+  color: #ffffff;
+}
+
+/* Styled background colors for avatar initials to make it premium */
+.bg-blue-avatar {
+  background-color: #42a5f5;
+}
+.bg-purple-avatar {
+  background-color: #ab47bc;
+}
+.bg-green-avatar {
+  background-color: #66bb6a;
+}
+.bg-orange-avatar {
+  background-color: #ffa726;
+}
+
+.reply-btc-avatar {
+  background-color: #FF9900;
+  color: #ffffff;
+  font-size: 14px;
+}
+
+/* Responsiveness */
+@media (max-width: 1024px) {
+  .privacy-section {
+    padding: 100px 40px;
+  }
+  
+  .privacy-card {
+    padding: 48px 40px;
+    gap: 40px;
+  }
+  
+  .card-title {
+    font-size: 36px;
+  }
+}
+
+@media (max-width: 900px) {
+  .privacy-card {
+    grid-template-columns: 1fr;
+    padding: 48px 24px;
+    gap: 48px;
+    text-align: center;
+  }
+  
+  .security-card {
+    grid-template-columns: 1fr;
+  }
+  
+  .community-card .card-info, 
+  .security-card .card-info {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .card-features {
+    align-items: flex-start;
+  }
+  
+  .community-card .community-mockup-col {
+    order: 2;
+  }
+  
+  .community-card .card-info {
+    order: 1;
+  }
+  
+  .security-card .privacy-graphic {
+    order: 2;
+  }
+  
+  .security-card .card-info {
+    order: 1;
+  }
+  
+  .privacy-shield-img {
+    max-width: 260px;
+  }
+}
+
+@media (max-width: 480px) {
+  .privacy-section {
+    padding: 60px 16px;
+  }
+  
+  .privacy-cards-container {
+    gap: 32px;
+  }
+  
+  .privacy-card {
+    padding: 32px 16px;
+    border-radius: 24px;
+  }
+  
+  .card-title {
+    font-size: 28px;
+  }
+  
+  .community-post-card {
+    padding: 20px;
+  }
+  
+  .post-avatar-wrapper {
+    width: 60px;
+    height: 60px;
+  }
+  
+  .post-actions {
+    gap: 16px;
+  }
+}
