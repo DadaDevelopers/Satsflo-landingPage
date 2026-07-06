@@ -21,7 +21,8 @@ export default function CTASection() {
         <div className="cta-buttons-container">
           <svg className="cta-buttons-svg" width="495" height="68" viewBox="0 0 495 68" fill="none" xmlns="http://www.w3.org/2000/svg" shapeRendering="geometricPrecision">
             {/* Download App Link */}
-            <a href="#download" className="cta-svg-btn cta-svg-btn-download">
+            <a href="https://drive.google.com/file/d/1wiczY25-ox_b2mJZSq6yDwo9_kRLedAA/view?usp=drive_link" 
+              className="cta-svg-btn cta-svg-btn-download">
               <rect x="0.400781" y="0.399805" width="243.8" height="66.8" rx="12.4" fill="#FF4081" shapeRendering="geometricPrecision"/>
               <rect x="0.400781" y="0.399805" width="243.8" height="66.8" rx="12.4" stroke="white" strokeWidth="0.8" shapeRendering="geometricPrecision"/>
               <path fillRule="evenodd" clipRule="evenodd" d="M34.8103 25.4829C35.6795 24.5205 36.2676 23.1834 36.1071 21.8496C34.8536 21.8959 33.335 22.6102 32.437 23.5722C31.6298 24.425 30.9245 25.7867 31.1128 27.0936C32.512 27.1925 33.9394 26.4443 34.8103 25.4829ZM37.4796 34.6899C37.4525 31.7003 39.7675 30.2658 39.8714 30.1953C38.5703 28.1663 36.543 27.8882 35.8217 27.8573C34.097 27.6699 32.4565 28.9384 31.5804 28.9384C30.7076 28.9384 29.3575 27.8823 27.9265 27.9103C26.046 27.942 24.3127 29.075 23.3457 30.8707C21.392 34.4824 22.8446 39.8343 24.7493 42.7634C25.6798 44.198 26.7885 45.8068 28.2444 45.7482C29.6483 45.6907 30.1783 44.7816 31.8741 44.7816C33.5688 44.7816 34.0458 45.7482 35.5291 45.7191C37.0383 45.6907 37.9948 44.2573 38.9189 42.819C39.9865 41.1565 40.426 39.5458 40.4527 39.4641C40.4187 39.4462 37.5103 38.2609 37.4796 34.6899Z" fill="white" shapeRendering="geometricPrecision"/>
