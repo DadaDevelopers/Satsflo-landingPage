@@ -5,6 +5,7 @@ import WellnessSection from './sections/WellnessSection';
 import CelebrateSection from './sections/CelebrateSection';
 import PrivacySection from './sections/PrivacySection';
 import CTASection from './sections/CTASection';
+import HeroSection from './components/HeroSection';
 // import FooterSection from './sections/FooterSection';
 import Footer from './components/Footer'
 
@@ -12,6 +13,8 @@ function App() {
   return (
     <div className="min-h-screen bg-white text-[#212121] flex flex-col font-sans">
       <main className="flex-1">
+        {/* Hero Section */}
+        <HeroSection />
         {/* Part 1: Features Section */}
         <FeaturesSection />
 
