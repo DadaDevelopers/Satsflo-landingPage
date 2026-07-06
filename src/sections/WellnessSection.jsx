@@ -78,7 +78,11 @@ export default function WellnessSection() {
             } items-center justify-between h-full`}>
               
               {/* Phone Container: Pushed to the outer edge (wider side of triangle) */}
-              <div className="w-1/2 flex justify-start items-center py-4 lg:py-8">
+              <div
+                className={`w-1/2 flex items-center py-4 lg:py-8 ${
+                  feature.reverse ? "justify-end" : "justify-start"
+                }`}
+              >
                 <img
                   src={feature.image}
                   alt={feature.title}

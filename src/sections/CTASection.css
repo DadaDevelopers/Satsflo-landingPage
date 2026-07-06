@@ -1,7 +1,7 @@
 .cta-section {
   width: 100%;
   background: #38064c; /* Deep purple background matching design */
-  padding: 120px 24px;
+  padding: 120px 105px;
   position: relative;
   overflow: hidden;
   text-align: center;
@@ -114,6 +114,12 @@
 }
 
 /* Responsive styles */
+@media (max-width: 1024px) {
+  .cta-section {
+    padding: 100px 40px;
+  }
+}
+
 @media (max-width: 768px) {
   .cta-section {
     padding: 80px 20px;

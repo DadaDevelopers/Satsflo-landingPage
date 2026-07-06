@@ -18,14 +18,10 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-
 html {
   scroll-behavior: smooth;
+  overflow-x: hidden;
+}
 
 @theme {
   --font-sans: 'Inter', system-ui, sans-serif;
@@ -52,7 +48,7 @@ body {
 /* User's Exact Features Section Styling */
 .features-section {
   width: 100%;
-  padding: 100px 80px;
+  padding: 100px 105px;
   background: #ffffff;
 }
 
@@ -178,7 +174,7 @@ body {
 
 @media (min-width: 1024px) {
   .wellness-header {
-    padding: 180px 24px 120px;
+    padding: 180px 105px 120px;
   }
 
   .wellness-header h2 {
@@ -200,5 +196,4 @@ body {
 
 .float-phone {
   animation: float 5s ease-in-out infinite;
-}
 }

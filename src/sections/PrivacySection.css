@@ -1,7 +1,7 @@
 .privacy-section {
   width: 100%;
   background: #ffffff;
-  padding: 120px 24px;
+  padding: 120px 105px;
   display: flex;
   justify-content: center;
 }
@@ -26,11 +26,11 @@
 }
 
 .community-card {
-  background: #FFE6EE; /* Pink background matching mockup */
+  background: #FFE5EE; /* Pink background matching mockup */
 }
 
 .security-card {
-  background: #FAF5FF; /* Lavender background matching mockup */
+  background: #E9E0FF; /* Lavender background matching mockup */
   grid-template-columns: 0.9fr 1.1fr; /* Shield on left, text on right */
 }
 
@@ -51,7 +51,9 @@
 }
 
 .card-title.text-pink {
-  color: #FF4081; /* Pink theme title */
+  color: #FF4081;
+  font-size:32px;
+  font-style: bold; /* Pink theme title */
 }
 
 .card-title.text-purple {
