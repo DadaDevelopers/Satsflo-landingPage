@@ -53,7 +53,7 @@ const features = [
 
 const FeaturesSection = () => {
   return (
-    <section className="features-section">
+    <section className="features-section" id="features">
       <SectionTitle
         overline="EVERYTHING YOU NEED"
         title="Designed Around Women.<br />Built for Real Life."
