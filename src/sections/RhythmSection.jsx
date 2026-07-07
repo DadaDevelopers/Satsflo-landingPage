@@ -30,7 +30,7 @@ const phases = [
 
 export default function RhythmSection({ onOpenPhaseModal }) {
   return (
-    <section className="rhythm-section" id="phases">
+    <section className="rhythm-section" id="about">
       <div className="rhythm-container">
 
         <div className="rhythm-image">
