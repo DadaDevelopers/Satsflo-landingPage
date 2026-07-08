@@ -71,7 +71,7 @@ export default function HeroSection() {
 
         <div className="grid grid-cols-1 items-center gap-12 pt-10 sm:pt-14 lg:grid-cols-2 lg:gap-8 lg:pt-16">
           <div className="max-w-xl lg:max-w-151.5">
-            <h1 className="text-center text-[48px] font-semibold leading-14 tracking-[-0.04em] text-white sm:text-left sm:text-[52px] sm:leading-[1.1] sm:tracking-[-0.03em] lg:text-[64px] lg:leading-tight lg:tracking-[-0.04em]">
+            <h1 className="text-center text-[44px] font-semibold leading-14 tracking-[-0.04em] text-white sm:text-left sm:text-[52px] sm:leading-[1.1] sm:tracking-[-0.03em] lg:text-[64px] lg:leading-tight lg:tracking-[-0.04em]">
               {'Understand Your '}
               <br />
               {'Cycle. Connect'}
@@ -95,16 +95,17 @@ export default function HeroSection() {
                 rel="noopener noreferrer"
                 className="flex items-center justify-center gap-2 whitespace-nowrap rounded-xl border-[0.8px] border-white bg-[#FF4081] py-4.5 pr-5 pl-6 text-lg font-medium text-white transition hover:brightness-105 lg:h-16.5 lg:min-w-60.75 lg:text-[20px] lg:leading-7.5"
               >
-                <AppleIcon />
                 <span className="h-4 w-px shrink-0 bg-white" />
                 <GooglePlayIcon />
                 <span>Download App</span>
               </a>
               <a
-                href="#waitlist"
+                href="https://forms.gle/tVc1ZbhkkRYUt4Mc8"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="flex items-center justify-center whitespace-nowrap rounded-xl border-[0.8px] border-white px-6 py-4.5 text-lg font-medium text-white transition hover:bg-white/10 lg:h-16.5 lg:w-57.5 lg:text-[20px] lg:leading-7.5"
               >
-                Join Waitlist
+                Feedback Form
               </a>
             </div>
 
