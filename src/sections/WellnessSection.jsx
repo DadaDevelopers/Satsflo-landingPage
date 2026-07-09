@@ -42,7 +42,7 @@ const features = [
 
 export default function WellnessSection() {
   return (
-    <section className="w-full pb-32 overflow-hidden" id="community">
+    <section className="w-full pb-32 overflow-hidden bg-[#FFF6FB]" id="community">
       
       {/* Header (Perfectly Centered) */}
       <div className="wellness-header">
