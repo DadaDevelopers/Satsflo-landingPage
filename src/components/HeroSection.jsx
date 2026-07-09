@@ -95,6 +95,7 @@ export default function HeroSection() {
                 rel="noopener noreferrer"
                 className="flex items-center justify-center gap-2 whitespace-nowrap rounded-xl border-[0.8px] border-white bg-[#FF4081] py-4.5 pr-5 pl-6 text-lg font-medium text-white transition hover:brightness-105 lg:h-16.5 lg:min-w-60.75 lg:text-[20px] lg:leading-7.5"
               >
+                <span className="h-4 w-px shrink-0 bg-white" />
                 <GooglePlayIcon />
                 <span>Download App</span>
               </a>
