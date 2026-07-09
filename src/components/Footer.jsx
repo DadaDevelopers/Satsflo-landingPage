@@ -1,5 +1,5 @@
 import logoPink from '../assets/Logopink.svg'
-import footerImage from '../assets/FooterImage.svg'
+import footerImage from '../assets/footer-image.webp'
 
 function AppleIcon() {
   return (
@@ -148,6 +148,9 @@ export default function Footer() {
               src={footerImage}
               alt="Satsflo app preview"
               className="max-w-130 w-full shrink-0 lg:w-165 lg:max-w-none"
+              loading="lazy"
+              width={1334}
+              height={1334}
             />
           </div>
         </div>

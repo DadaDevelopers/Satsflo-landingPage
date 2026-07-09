@@ -25,10 +25,10 @@ export default function Navbar() {
         </ul>
 
         <a
-          href="#waitlist"
+          href="https://forms.gle/tVc1ZbhkkRYUt4Mc8"
           className="hidden rounded-xl border-[0.8px] border-[#F2F2F2] px-4 py-2.5 text-base text-[#F2F2F2] transition hover:bg-white/10 lg:inline-block"
         >
-          Join Waitlist
+          Feedback Form
         </a>
 
         <button
@@ -61,11 +61,13 @@ export default function Navbar() {
             </a>
           ))}
           <a
-            href="#waitlist"
+            href="https://forms.gle/tVc1ZbhkkRYUt4Mc8"
             className="rounded-xl border-[0.8px] border-[#F2F2F2] px-4 py-2.5 text-center text-base text-[#F2F2F2]"
             onClick={() => setMenuOpen(false)}
+            target="_blank"
+            rel="noopener noreferrer"
           >
-            Join Waitlist
+            Feedback Form
           </a>
         </div>
       )}

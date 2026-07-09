@@ -1,5 +1,5 @@
 import Navbar from './Navbar'
-import phoneMockup from '../assets/Black-Titanium.svg'
+import phoneMockup from '../assets/hero-phones.webp'
 import pic1 from '../assets/pic1.svg'
 import pic2 from '../assets/pic2.svg'
 import pic3 from '../assets/pic3.svg'
@@ -142,11 +142,14 @@ export default function HeroSection() {
               src={phoneMockup}
               alt="Satsflo app screens showing cycle tracking and a Bitcoin gift token"
               className="relative z-10 mx-auto h-auto w-full max-w-110.5 drop-shadow-2xl lg:max-w-140.75"
+              fetchPriority="high"
+              width={1126}
+              height={1580}
             />
           </div>
         </div>
       </div>
-      <div className="absolute inset-x-0 bottom-0 h-16 w-full overflow-hidden bg-[linear-gradient(106.49deg,#A01F7B_1.84%,#771178_21.82%,#550576_41.79%)] sm:h-24 lg:h-28 z-0">
+      <div className="absolute inset-x-0 bottom-0 h-16 w-full overflow-hidden sm:h-24 lg:h-28 z-0">
         <svg
           aria-hidden="true"
           viewBox="0 0 1440 100"
