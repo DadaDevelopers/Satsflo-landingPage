@@ -9,7 +9,7 @@ export default function CelebrateSection() {
       <div className="celebrate-container">
         <SectionTitle
           overline="A NEW WAY TO CELEBRATE"
-          title="The World's First Bitcoin-Powered<br />Cycle App."
+          title="The World's First Bitcoin-Powered<br class='celebrate-title-break' /> Cycle App."
         />
 
         <div className="celebrate-graphic-wrapper">

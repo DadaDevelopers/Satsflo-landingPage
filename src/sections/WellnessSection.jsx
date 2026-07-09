@@ -42,7 +42,7 @@ const features = [
 
 export default function WellnessSection() {
   return (
-    <section className="w-full pb-32 overflow-hidden" id="community">
+    <section className="w-full pb-32 overflow-hidden bg-[#FFF6FB]" id="community">
       
       {/* Header (Perfectly Centered) */}
       <div className="wellness-header">
@@ -58,7 +58,7 @@ export default function WellnessSection() {
         {features.map((feature, index) => (
           <div
             key={index}
-            className="relative w-full flex items-center justify-center min-h-[380px] sm:min-h-[480px] lg:min-h-[780px]"
+            className="relative w-full flex items-center justify-center min-h-100 sm:min-h-120 lg:min-h-195"
             style={{
               marginTop: index === 0 ? "0" : "calc(-1 * var(--slant-height))"
             }}
@@ -80,7 +80,7 @@ export default function WellnessSection() {
               {/* Phone Container: Pushed to the outer edge (wider side of triangle) */}
               <div
                 className={`w-1/2 flex items-center py-4 lg:py-8 ${
-                  feature.reverse ? "justify-end" : "justify-start"
+                  feature.reverse ? "justify-end -mr-4 lg:mr-0" : "justify-start -ml-4 lg:ml-0"
                 }`}
               >
                 <img
