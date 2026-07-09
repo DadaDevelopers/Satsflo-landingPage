@@ -77,40 +77,64 @@
 
 .cta-buttons-container {
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  width: 100%;
-}
-
-.cta-buttons-svg {
+  gap: 19px;
   width: 100%;
   max-width: 495px;
-  height: auto;
-  overflow: visible;
+  margin: 0 auto;
 }
 
-/* Style the inner SVG link states */
-.cta-svg-btn {
+.cta-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  flex: 1 1 220px;
+  height: 68px;
+  padding: 0 24px;
+  border-radius: 12px;
+  border: 0.8px solid #fff;
+  font-size: 20px;
+  font-weight: 600;
+  font-family: var(--font-sans), sans-serif;
+  color: #fff;
+  text-decoration: none;
+  white-space: nowrap;
   cursor: pointer;
-  transition: opacity 0.3s ease, filter 0.3s ease;
+  transition: opacity 0.3s ease, filter 0.3s ease, background 0.3s ease;
 }
 
-.cta-svg-btn rect {
-  transition: fill 0.3s ease, stroke 0.3s ease, filter 0.3s ease;
+.cta-btn-download {
+  background: #FF4081;
 }
 
-/* Hover effect for Download App button */
-.cta-svg-btn-download:hover rect {
+.cta-btn-download:hover {
   filter: brightness(0.92);
 }
 
-/* Hover effect for Join Waitlist button */
-.cta-svg-btn-waitlist:hover rect {
-  fill: rgba(255, 255, 255, 0.15);
+.cta-btn-waitlist {
+  background: transparent;
+}
+
+.cta-btn-waitlist:hover {
+  background: rgba(255, 255, 255, 0.15);
+}
+
+.cta-btn-divider {
+  width: 1px;
+  height: 16px;
+  background: #fff;
+  flex-shrink: 0;
 }
 
 .desktop-only {
   display: block;
+}
+
+.mobile-only {
+  display: none;
 }
 
 /* Responsive styles */
@@ -122,25 +146,46 @@
 
 @media (max-width: 768px) {
   .cta-section {
-    padding: 80px 20px;
+    padding: 50px 20px 80px;
     min-height: auto;
   }
-  
+
   .cta-title {
     font-size: 32px;
   }
-  
+
   .cta-subtitle {
     font-size: 16px;
     margin-bottom: 30px;
   }
-  
+
   .desktop-only {
     display: none;
   }
-  
-  /* Hide background vectors on small mobile screens to keep layout clean and avoid horizontal overflows */
+
+  .mobile-only {
+    display: block;
+  }
+
+  /* Scale down background vectors for mobile and re-anchor the right one near the bottom to match the design */
   .cta-heart {
-    display: none;
+    width: 260px;
+    height: 208px;
+  }
+
+  .cta-heart-right {
+    top: auto;
+    bottom: -8%;
+  }
+}
+
+@media (max-width: 480px) {
+  .cta-buttons-container {
+    flex-direction: column;
+  }
+
+  .cta-btn {
+    width: 100%;
+    flex: none;
   }
 }
