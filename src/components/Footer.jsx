@@ -1,9 +1,9 @@
 import logoPink from '../assets/Logopink.svg'
-import footerImage from '../assets/FooterImage.svg'
+import footerImage from '../assets/footer-image.webp'
 
 function AppleIcon() {
   return (
-    <svg className="h-7.5 w-[23.27px] sm:h-[23.27px] sm:w-[18.03px]" viewBox="0 0 18 24" fill="none" aria-hidden="true">
+    <svg className="h-9 w-6.75 shrink-0 sm:h-[23.27px] sm:w-[18.03px]" viewBox="0 0 18 24" fill="none" aria-hidden="true">
       <path
         fill="#000"
         d="M14.86 12.7c-.02-2.1 1.72-3.1 1.8-3.15-.98-1.44-2.51-1.63-3.05-1.66-1.3-.13-2.54.77-3.2.77-.66 0-1.68-.75-2.76-.73-1.42.02-2.73.83-3.46 2.1-1.47 2.56-.38 6.36 1.06 8.44.7 1.02 1.53 2.16 2.63 2.12 1.05-.04 1.45-.68 2.72-.68s1.63.68 2.75.66c1.14-.02 1.86-1.03 2.55-2.06.8-1.18 1.13-2.33 1.15-2.39-.03-.01-2.17-.83-2.19-3.42Z"
@@ -18,7 +18,7 @@ function AppleIcon() {
 
 function GooglePlayIcon() {
   return (
-    <svg className="h-7.5 w-7.5 sm:h-[23.9px] sm:w-[21.73px]" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+    <svg className="h-7.5 w-7.5 shrink-0 sm:h-[23.9px] sm:w-[21.73px]" viewBox="0 0 24 24" fill="none" aria-hidden="true">
       <path
         fill="#FFCC66"
         d="M22.018 13.298l-3.919 2.218-3.515-3.493 3.543-3.521 3.891 2.202a1.49 1.49 0 0 1 0 2.594z"
@@ -46,7 +46,7 @@ function AppStoreBadge() {
       className="flex h-17.5 w-full items-center gap-3 rounded-[44.9102px] bg-white px-6 shadow-sm ring-1 ring-black/10 transition hover:brightness-95 sm:h-12.5 sm:w-41.75 sm:gap-2 sm:rounded-[25px] sm:px-4"
     >
       <AppleIcon />
-      <span className="flex flex-col leading-none text-black">
+      <span className="flex flex-1 flex-col text-center leading-none text-black">
         <span className="text-xl sm:text-[10px]">Download on the</span>
         <span className="text-xl font-semibold sm:text-base">App Store</span>
       </span>
@@ -61,7 +61,7 @@ function GooglePlayBadge() {
       className="flex h-17.5 w-full items-center gap-3 rounded-[44.9102px] bg-black px-6 transition hover:brightness-110 sm:h-12.5 sm:w-41.75 sm:gap-2 sm:rounded-[25px] sm:px-4"
     >
       <GooglePlayIcon />
-      <span className="flex flex-col text-center leading-none text-white">
+      <span className="flex flex-1 flex-col text-center leading-none text-white">
         <span className="text-xl sm:text-[14px]">Get it on</span>
         <span className="text-xl  font-semibold sm:text-base">Google Play</span>
       </span>
@@ -114,14 +114,22 @@ export default function Footer() {
     <footer className="relative overflow-hidden bg-white">
       <svg
         aria-hidden="true"
-        className="absolute inset-0 h-full w-full"
+        className="absolute inset-0 block h-full w-full sm:hidden"
+        viewBox="0 0 100 240"
+        preserveAspectRatio="none"
+      >
+        <path d="M0,38 Q28,15 44,17 L100,17 L100,240 L0,240 Z" fill="#FF4081" fillOpacity="0.1" />
+      </svg>
+      <svg
+        aria-hidden="true"
+        className="absolute inset-0 hidden h-full w-full sm:block"
         viewBox="0 0 1440 907"
         preserveAspectRatio="none"
       >
         <path d="M0,330 Q400,275 640,271 L1440,271 L1440,907 L0,907 Z" fill="#FF4081" fillOpacity="0.1" />
       </svg>
 
-      <div className="relative mx-auto max-w-360 px-5 pt-10 pb-8 sm:px-8 sm:pt-20 lg:pt-24 lg:pr-6.25 lg:pl-45.75">
+      <div className="relative mx-auto max-w-360 px-5 pt-10 pb-8 sm:px-8 sm:pt-20 lg:pt-24 lg:pr-20.75 lg:pl-45.75">
         <div className="grid grid-cols-1 gap-10.75 sm:gap-8 lg:grid-cols-[1.2fr_0.8fr] lg:items-center lg:gap-0">
           <div className="order-2 flex flex-col items-center text-center lg:order-1 lg:translate-y-18.5 lg:items-start lg:text-left">
             <div className="flex items-center gap-3 lg:gap-6">
@@ -139,7 +147,10 @@ export default function Footer() {
             <img
               src={footerImage}
               alt="Satsflo app preview"
-              className="mx-w-[520px] w-full"
+              className="max-w-130 w-full shrink-0 lg:w-165 lg:max-w-none"
+              loading="lazy"
+              width={1334}
+              height={1334}
             />
           </div>
         </div>
@@ -150,21 +161,23 @@ export default function Footer() {
             <AppStoreBadge />
           </div>
 
-          <p className="mt-12 text-center text-[24px] leading-8 text-[#0A142F] sm:mt-6 sm:text-[20px] sm:leading-normal">
-            © {year} Satsflo Period App. All Rights Reserved.
-          </p>
+          <div className="flex flex-col items-center lg:flex-row lg:gap-20.25">
+            <p className="mt-12 text-center text-[24px] leading-8 text-[#0A142F] sm:mt-6 sm:text-[20px] sm:leading-normal lg:mt-0">
+              © {year} Satsflo Period App. All Rights Reserved.
+            </p>
 
-          <div className="mt-6 flex items-center gap-3">
-            {SOCIALS.map(({ Icon, label, href }) => (
-              <a
-                key={label}
-                href={href}
-                aria-label={label}
-                className="flex h-9.5 w-9.5 items-center justify-center rounded-full border-[1.5px] border-[#0A142F]/15 transition hover:bg-[#0A142F]/5"
-              >
-                <Icon />
-              </a>
-            ))}
+            <div className="mt-6 flex items-center gap-3 lg:mt-0">
+              {SOCIALS.map(({ Icon, label, href }) => (
+                <a
+                  key={label}
+                  href={href}
+                  aria-label={label}
+                  className="flex h-9.5 w-9.5 items-center justify-center rounded-full border-[1.5px] border-[#0A142F]/15 transition hover:bg-[#0A142F]/5"
+                >
+                  <Icon />
+                </a>
+              ))}
+            </div>
           </div>
         </div>
       </div>
