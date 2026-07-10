@@ -139,8 +139,24 @@
     display: none;
   }
   
-  /* Hide background vectors on small mobile screens to keep layout clean and avoid horizontal overflows */
+  /* Render and scale down background heart vectors on mobile screens to be recognizable */
   .cta-heart {
-    display: none;
+    display: block;
+    width: 140px;
+    height: auto;
+    opacity: 0.35;
+  }
+
+  .cta-heart-left {
+    left: -35px;
+    top: 8%;
+    transform: rotate(-25deg);
+  }
+
+  .cta-heart-right {
+    right: -35px;
+    top: auto;
+    bottom: 8%;
+    transform: rotate(25deg);
   }
 }

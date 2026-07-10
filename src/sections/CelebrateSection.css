@@ -42,8 +42,10 @@
 .celebrate-caption {
   font-family: var(--font-serif), Georgia, serif;
   font-style: italic;
-  font-size: 1.5rem; /* 24px */
-  color: #3f0e40; /* Dark purple matching Figma */
+  font-size: 1.5rem;
+  /* 24px */
+  color: #3f0e40;
+  /* Dark purple matching Figma */
   margin-top: 20px;
   font-weight: 600;
   text-align: center;
@@ -59,11 +61,11 @@
   .celebrate-section {
     padding: 80px 16px;
   }
-  
+
   .celebrate-caption {
     font-size: 1.25rem;
   }
-  
+
   .celebrate-img {
     margin-top: -18%;
     margin-bottom: -10%;

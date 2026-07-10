@@ -16,6 +16,21 @@
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
+  /* Responsive Slant Height for WellnessSection */
+  --slant-height: 16vw;
+}
+
+@media (min-width: 768px) {
+  :root {
+    --slant-height: 10vw;
+  }
+}
+
+@media (min-width: 1200px) {
+  :root {
+    --slant-height: 130px;
+  }
 }
 
 html {
@@ -25,6 +40,7 @@ html {
 
 @theme {
   --font-sans: 'Inter', system-ui, sans-serif;
+  --font-serif: 'EB Garamond', Georgia, serif;
   --font-display: 'Anton', system-ui, sans-serif;
   --default-font-family: var(--font-sans);
 }
@@ -45,111 +61,7 @@ body {
   flex-direction: column;
 }
 
-/* User's Exact Features Section Styling */
-.features-section {
-  width: 100%;
-  padding: 100px 105px;
-  background: #ffffff;
-}
 
-.heading {
-  text-align: center;
-  margin-bottom: 70px;
-}
-
-.heading span {
-  color: #ff4081;
-  letter-spacing: 3px;
-  font-size: 16px;
-  font-weight: 700;
-  font-family: var(--font-serif);
-  text-transform: uppercase;
-}
-
-.heading h2 {
-  margin-top: 15px;
-  font-size: 48px;
-  line-height: 1.2;
-  color: #090909;
-  font-family: var(--font-sans);
-  font-weight: 700;
-}
-
-.features-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 30px;
-  max-width: 1442px;
-  margin: 0 auto;
-}
-
-.feature-card {
-  border: 1px solid #ffccdd;
-  border-radius: 20px;
-  padding: 40px;
-  text-align: center;
-  transition: 0.3s;
-  background: #ffffff;
-}
-
-.feature-card:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.08);
-}
-
-.icon-wrapper {
-  width: 120px;
-  height: 120px;
-  background: #ff4081;
-  border-radius: 50%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: auto;
-}
-
-.icon-wrapper img {
-  width: 70px;
-}
-
-.feature-card h3 {
-  margin-top: 35px;
-  font-size: 30px;
-  font-family: var(--font-serif);
-  font-weight: 700;
-  color: #090909;
-}
-
-.feature-card p {
-  margin-top: 15px;
-  color: #444;
-  font-size: 18px;
-  line-height: 1.7;
-  font-family: var(--font-sans);
-}
-
-@media (max-width: 992px) {
-  .features-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-  .features-section {
-    padding: 80px 40px;
-  }
-}
-
-@media (max-width: 700px) {
-  .features-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .features-section {
-    padding: 70px 25px;
-  }
-
-  .heading h2 {
-    font-size: 34px;
-  }
-}
 
 .wellness-header {
   padding: 120px 24px 80px;
