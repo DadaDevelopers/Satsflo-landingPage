@@ -42,10 +42,10 @@ const features = [
 
 export default function WellnessSection() {
   return (
-    <section className="w-full pb-32 overflow-hidden bg-[#FFF6FB]" id="community">
+    <section className="w-full pb-32 overflow-hidden" id="community">
       
       {/* Header (Perfectly Centered) */}
-      <div className="wellness-header">
+      <div className="wellness-header bg-[#FFF6FB]">
         <span className="text-[#FF4081] text-sm font-bold tracking-[0.25em] font-[var(--font-serif)] uppercase block mb-6">
           MORE THAN TRACKING
         </span>
@@ -86,7 +86,7 @@ export default function WellnessSection() {
                 <img
                   src={feature.image}
                   alt={feature.title}
-                  className="w-36 sm:w-56 lg:w-72 xl:w-80 max-h-[260px] sm:max-h-[380px] lg:max-h-[580px] xl:max-h-[640px] object-contain drop-shadow-2xl hover:-translate-y-3 transition-all duration-500 float-phone"
+                  className="w-44 sm:w-64 lg:w-80 xl:w-96 max-h-80 sm:max-h-120 lg:max-h-180 xl:max-h-215 object-contain drop-shadow-2xl hover:-translate-y-3 transition-all duration-500 float-phone"
                 />
               </div>
 
