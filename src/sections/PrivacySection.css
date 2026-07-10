@@ -42,7 +42,7 @@
 }
 
 .card-title {
-  font-size: 42px;
+  font-size: 36px;
   line-height: 1.2;
   font-family: var(--font-sans), sans-serif;
   font-weight: 800;
@@ -423,7 +423,7 @@
   }
   
   .privacy-shield-img {
-    max-width: 260px;
+    max-width: 420px;
   }
 }
 
@@ -444,7 +444,11 @@
   .card-title {
     font-size: 28px;
   }
-  
+
+  .card-title.text-pink {
+    font-size: 24px;
+  }
+
   .community-post-card {
     padding: 20px;
   }

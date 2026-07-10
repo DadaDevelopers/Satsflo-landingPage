@@ -62,7 +62,7 @@ export default function WellnessSection() {
         {features.map((feature, index) => (
           <div
             key={index}
-            className="relative w-full flex items-center justify-center min-h-[380px] sm:min-h-[480px] lg:min-h-[780px]"
+            className="relative w-full flex items-center justify-center min-h-100 sm:min-h-120 lg:min-h-195"
             style={{
               marginTop: index === 0 ? "0" : "calc(-1 * var(--slant-height))"
             }}
