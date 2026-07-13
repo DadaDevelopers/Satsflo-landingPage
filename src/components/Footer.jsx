@@ -82,11 +82,19 @@ function InstagramIcon() {
 
 function LinkedinIcon() {
   return (
-    <svg className="h-5 w-5 sm:h-4 sm:w-4" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-      <path
-        fill="#0A142F"
-        d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5ZM3 9.98h4V21H3V9.98ZM9.5 9.98h3.83v1.51h.05c.53-1 1.83-2.06 3.77-2.06 4.03 0 4.77 2.65 4.77 6.1V21h-4v-4.9c0-1.17-.02-2.68-1.63-2.68-1.63 0-1.88 1.27-1.88 2.59V21h-4V9.98Z"
-      />
+    <svg
+      className="h-5 w-5 sm:h-4 sm:w-4"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="#0A142F"
+      strokeWidth="1.75"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      aria-hidden="true"
+    >
+      <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" />
+      <rect width="4" height="12" x="2" y="9" />
+      <circle cx="4" cy="4" r="2" />
     </svg>
   )
 }
@@ -96,7 +104,7 @@ function TwitterIcon() {
     <svg className="h-5 w-5 sm:h-4 sm:w-4" viewBox="0 0 24 24" fill="none" aria-hidden="true">
       <path
         fill="#0A142F"
-        d="M22 5.92c-.72.32-1.5.53-2.31.63a4.02 4.02 0 0 0 1.76-2.22 8 8 0 0 1-2.55.98 4.01 4.01 0 0 0-6.84 3.66A11.39 11.39 0 0 1 3.9 4.9a4.01 4.01 0 0 0 1.24 5.35 4 4 0 0 1-1.82-.5v.05a4.01 4.01 0 0 0 3.22 3.93 4 4 0 0 1-1.81.07 4.02 4.02 0 0 0 3.75 2.79A8.05 8.05 0 0 1 2 18.57a11.35 11.35 0 0 0 6.15 1.8c7.38 0 11.42-6.11 11.42-11.42l-.01-.52A8.18 8.18 0 0 0 22 5.92Z"
+        d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"
       />
     </svg>
   )
@@ -105,7 +113,7 @@ function TwitterIcon() {
 const SOCIALS = [
   { Icon: InstagramIcon, label: 'Instagram', href: '#' },
   { Icon: LinkedinIcon, label: 'LinkedIn', href: '#' },
-  { Icon: TwitterIcon, label: 'Twitter', href: '#' },
+  { Icon: TwitterIcon, label: 'X', href: '#' },
 ]
 
 export default function Footer() {

@@ -162,30 +162,25 @@
   .desktop-only {
     display: none;
   }
-
-  .mobile-only {
+  
+  /* Render and scale down background heart vectors on mobile screens to be recognizable */
+  .cta-heart {
     display: block;
+    width: 140px;
+    height: auto;
+    opacity: 0.35;
   }
 
-  /* Scale down background vectors for mobile and re-anchor the right one near the bottom to match the design */
-  .cta-heart {
-    width: 260px;
-    height: 208px;
+  .cta-heart-left {
+    left: -35px;
+    top: 8%;
+    transform: rotate(-25deg);
   }
 
   .cta-heart-right {
+    right: -35px;
     top: auto;
-    bottom: -8%;
-  }
-}
-
-@media (max-width: 480px) {
-  .cta-buttons-container {
-    flex-direction: column;
-  }
-
-  .cta-btn {
-    width: 100%;
-    flex: none;
+    bottom: 8%;
+    transform: rotate(25deg);
   }
 }

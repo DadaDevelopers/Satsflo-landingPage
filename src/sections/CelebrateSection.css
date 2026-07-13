@@ -45,9 +45,12 @@
 .celebrate-caption {
   font-family: var(--font-serif), Georgia, serif;
   font-style: italic;
-  font-size: 1.5rem; /* 24px */
-  color: #70138A; /* Dark purple matching Figma */
-  font-weight:bold;
+  font-size: 1.5rem;
+  /* 24px */
+  color: #3f0e40;
+  /* Dark purple matching Figma */
+  margin-top: 20px;
+  font-weight: 600;
   text-align: center;
 
 }
@@ -67,19 +70,12 @@
     margin-bottom: 50px;
   }
 
-  .celebrate-section .heading h2 {
-    font-size: 30px;
-  }
-
-  .celebrate-title-break {
-    display: none;
-  }
-
-  .celebrate-graphic-wrapper {
-    margin: 35px auto 42px;
-  }
-
   .celebrate-caption {
     font-size: 1.25rem;
+  }
+
+  .celebrate-img {
+    margin-top: -18%;
+    margin-bottom: -10%;
   }
 }

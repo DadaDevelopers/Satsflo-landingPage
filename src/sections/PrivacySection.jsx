@@ -3,6 +3,10 @@ import { Check, MessageSquare, Heart, Send } from 'lucide-react';
 import Button from '../components/Button';
 import shieldImg from '../assets/privacy-shield.png';
 import zuriAvatar from '../assets/zuri-avatar.png';
+import pic1 from '../assets/pic1.svg';
+import pic2 from '../assets/pic2.svg';
+import pic3 from '../assets/pic3.svg';
+import pic4 from '../assets/pic4.svg';
 import './PrivacySection.css';
 
 export default function PrivacySection() {
@@ -96,11 +100,11 @@ export default function PrivacySection() {
                 </div>
 
                 <div className="post-replies">
-                  <div className="reply-avatar bg-blue-avatar">JD</div>
-                  <div className="reply-avatar bg-purple-avatar">AM</div>
+                  <img src={pic1} alt="" className="reply-avatar reply-img-avatar" />
+                  <img src={pic2} alt="" className="reply-avatar reply-img-avatar" />
                   <div className="reply-avatar reply-btc-avatar">₿</div>
-                  <div className="reply-avatar bg-green-avatar">SK</div>
-                  <div className="reply-avatar bg-orange-avatar">LH</div>
+                  <img src={pic3} alt="" className="reply-avatar reply-img-avatar" />
+                  <img src={pic4} alt="" className="reply-avatar reply-img-avatar" />
                 </div>
               </div>
 

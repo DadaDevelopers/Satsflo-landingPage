@@ -42,19 +42,23 @@ const features = [
 
 export default function WellnessSection() {
   return (
-    <section className="w-full pb-32 overflow-hidden bg-[#FFF6FB]" id="community">
+    <section 
+      className="w-full pb-32 overflow-hidden" 
+      id="community" 
+      style={{ background: "linear-gradient(to bottom, #fff6fb 50%, #ffffff 50%)" }}
+    >
       
       {/* Header (Perfectly Centered) */}
       <div className="wellness-header">
         <span className="text-[#FF4081] text-sm font-bold tracking-[0.25em] font-[var(--font-serif)] uppercase block mb-6">
           MORE THAN TRACKING
         </span>
-        <h2 className="text-3xl lg:text-4xl font-bold text-[#111] font-[var(--font-sans)]">
+        <h2 className="text-[22px] lg:text-4xl font-bold text-[#111] font-[var(--font-sans)]">
           A Daily Wellness Companion.
         </h2>
       </div>
 
-      <div className="flex flex-col relative w-full" style={{ "--slant-height": "6vw" }}>
+      <div className="flex flex-col relative w-full">
         {features.map((feature, index) => (
           <div
             key={index}
@@ -73,27 +77,31 @@ export default function WellnessSection() {
             />
 
             {/* Inner Content Wrapper - ALWAYS side-by-side */}
-            <div className={`relative z-10 w-full max-w-[1442px] mx-auto px-4 lg:px-16 py-8 lg:py-16 flex ${
+            <div className={`relative z-10 w-full max-w-[1100px] mx-auto px-4 sm:px-8 lg:px-16 py-6 lg:py-12 flex ${
               feature.reverse ? "flex-row-reverse" : "flex-row"
-            } items-center justify-between h-full`}>
+            } items-center justify-center gap-3 sm:gap-8 lg:gap-16 h-full`}>
               
-              {/* Phone Container: Pushed to the outer edge (wider side of triangle) */}
+              {/* Phone Container: Aligned towards the center */}
               <div
-                className={`w-1/2 flex items-center py-4 lg:py-8 ${
-                  feature.reverse ? "justify-end -mr-4 lg:mr-0" : "justify-start -ml-4 lg:ml-0"
+                className={`w-[46%] flex items-center py-2 lg:py-6 ${
+                  feature.reverse ? "justify-start" : "justify-end"
                 }`}
               >
                 <img
                   src={feature.image}
                   alt={feature.title}
-                  className="w-36 sm:w-56 lg:w-72 xl:w-80 max-h-[260px] sm:max-h-[380px] lg:max-h-[580px] xl:max-h-[640px] object-contain drop-shadow-2xl hover:-translate-y-3 transition-all duration-500 float-phone"
+                  className="w-full max-w-[160px] sm:max-w-[240px] lg:max-w-[320px] max-h-[300px] sm:max-h-[420px] lg:max-h-[580px] xl:max-h-[640px] object-contain drop-shadow-2xl hover:-translate-y-3 transition-all duration-500 float-phone"
                 />
               </div>
 
-              {/* Text Container: Centered in its half */}
-              <div className="w-1/2 flex justify-center items-center px-2 lg:px-4">
+              {/* Text Container: Aligned towards the center */}
+              <div className={`w-[50%] flex items-center px-1 sm:px-4 ${
+                feature.reverse ? "justify-end" : "justify-start"
+              }`}>
                 <h2 
-                  className="text-2xl sm:text-3xl lg:text-4xl xl:text-5xl font-bold font-[var(--font-serif)] text-center leading-tight"
+                  className={`text-xl sm:text-3xl lg:text-4xl xl:text-5xl font-bold font-[var(--font-serif)] leading-tight ${
+                    feature.reverse ? "text-right" : "text-left"
+                  }`}
                   style={{ color: feature.textColor }}
                 >
                   {feature.title}
