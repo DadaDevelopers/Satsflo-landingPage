@@ -4,7 +4,7 @@ import SectionTitle from '../components/SectionTitle';
 
 import {
   BookOpen,
-  Bitcoin,
+  Zap,
 } from 'lucide-react';
 
 import iconCycle from '../assets/icon-cycle.png';
@@ -44,7 +44,7 @@ const features = [
       'Connect, learn and grow with women on similar journeys.',
   },
   {
-    icon: Bitcoin,
+    icon: Zap,
     title: 'Gift Token',
     description:
       'Send sats to celebrate, support and encourage those who matter.',

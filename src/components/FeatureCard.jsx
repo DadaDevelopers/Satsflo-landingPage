@@ -3,9 +3,17 @@ import React from 'react';
 const FeatureCard = ({ icon, title, description }) => {
   return (
     <div className="border border-[#ffccdd] rounded-[20px] p-[40px] text-center bg-white transition-all duration-300 hover:-translate-y-[8px] hover:shadow-[0_15px_40px_rgba(0,0,0,0.08)]">
-      <div className="w-[120px] h-[120px] bg-[#ff4081] rounded-full flex justify-center items-center mx-auto">
+      <div className="relative w-[120px] h-[120px] bg-[#ff4081] rounded-full flex justify-center items-center mx-auto">
         {typeof icon === 'string' ? (
           <img src={icon} alt={title} className="w-[70px] mix-blend-screen" />
+        ) : title === 'Gift Token' ? (
+          <div className="relative w-[80px] h-[80px]">
+            {React.createElement(icon, {
+              className: 'absolute left-[15.61%] top-[3.14%] w-[68.76%] h-[93.72%]',
+              color: '#FFFFFF',
+              strokeWidth: 1.75,
+            })}
+          </div>
         ) : (
           React.createElement(icon, { size: 56, color: '#FFFFFF', strokeWidth: 1.75 })
         )}
